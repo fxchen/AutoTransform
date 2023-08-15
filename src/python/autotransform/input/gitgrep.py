@@ -27,7 +27,7 @@ class GitGrepInput(Input):
         name (ClassVar[InputName]): The name of the component.
     """
 
-    pattern: str
+    pattern: str = ""
 
     name: ClassVar[InputName] = InputName.GIT_GREP
 
