@@ -11,8 +11,6 @@
 
 from __future__ import annotations
 
-from typing import Any, ClassVar, Dict, List, Sequence, Type
-
 from autotransform.input.base import Input, InputName
 from autotransform.item.base import FACTORY as item_factory
 from autotransform.item.base import Item
