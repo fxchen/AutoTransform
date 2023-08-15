@@ -11,6 +11,7 @@
 
 from __future__ import annotations
 
+from __future__ import annotations
 import subprocess
 from typing import ClassVar, Sequence
 
