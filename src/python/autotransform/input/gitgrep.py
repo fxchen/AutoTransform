@@ -1,3 +1,4 @@
+++ b/src/python/autotransform/input/gitgrep.py
 # AutoTransform
 # Large scale, component based code modification library
 #
@@ -50,6 +51,7 @@ class GitGrepInput(Input):
 
         try:
             files = subprocess.check_output(git_grep_cmd, encoding="UTF-8").strip().splitlines()
+        return [FileItem(key=os.path.normpath(file)) for file in files]
         except subprocess.CalledProcessError:
             return []
         return [FileItem(key=file.replace("\\", "/")) for file in files]
