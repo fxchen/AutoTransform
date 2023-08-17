@@ -54,4 +54,3 @@ class GitGrepInput(Input):
             print("Error: Failed to execute git grep command.")
             return []
         return [FileItem(key=file.replace("\\", "/")) for file in files]
-```
