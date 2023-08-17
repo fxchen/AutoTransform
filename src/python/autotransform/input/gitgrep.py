@@ -51,5 +51,7 @@ class GitGrepInput(Input):
         try:
             files = subprocess.check_output(git_grep_cmd, encoding="UTF-8").strip().splitlines()
         except subprocess.CalledProcessError:
+            print("Error: Failed to execute git grep command.")
             return []
         return [FileItem(key=file.replace("\\", "/")) for file in files]
+```
